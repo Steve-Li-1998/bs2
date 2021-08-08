@@ -1,0 +1,9 @@
+(Leider nur die Antworten der Programmierungsaufgaben)
+
+b. Analyse
+
+1. Wenn das Programm laeuft, ist die verbleibenden Termin -5 gezaehlt bzw. mehr als 50 Terminen vereinbart werden.
+
+2. Unsynchronisation
+
+3. Wenn das Thread 1 die verbleibenden Terminen liest, liest das Thread 2 die verbleibenden Terminen parallel. Dann Thread 1 eien Termin erfolgreich vereinbart, verringert die Termin-Zaehler um 1 und Thread 2 auch einen Termin gleichzeitig erfolgreich vereinbart, deswegen verringert die Termin-Zaehler nochmal un 1. Wenn die verbleibenden Terminen ganz viel sind, laeuft das Programm kein Problem. Wenn Verbleibender Termin aber nur 1 sind, lesen die Thread 1 & 2 gleichzeitig den Termin-Zaehler, diese beide Thread denkt, noch einen Termin verfuegbar ist. Dann machen sie zweimal Vereinbarung parallel, obwohl es nur einen Termin verbleiben.
